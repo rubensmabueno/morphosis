@@ -1,7 +1,0 @@
-com/rubensminoru/morphosis/consumers/shared/Consumer.class
-com/rubensminoru/morphosis/consumers/shared/ConsumerFactory.class
-com/rubensminoru/morphosis/consumers/shared/entities/Record.class
-com/rubensminoru/morphosis/consumers/shared/entities/RecordMetadata.class
-com/rubensminoru/morphosis/consumers/shared/ConsumerProvider.class
-com/rubensminoru/morphosis/consumers/shared/entities/ConsumerRecord.class
-com/rubensminoru/morphosis/consumers/shared/config/ConsumerConfig.class

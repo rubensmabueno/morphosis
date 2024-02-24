@@ -1,5 +1,0 @@
-com/rubensminoru/morphosis/partitioners/kafka_offset_aware_partitioner/entities/PartitionInfo.class
-com/rubensminoru/morphosis/partitioners/kafka_offset_aware_partitioner/factories/PartitionInfoFactoryImpl.class
-com/rubensminoru/morphosis/partitioners/kafka_offset_aware_partitioner/PartitionerImpl.class
-com/rubensminoru/morphosis/partitioners/kafka_offset_aware_partitioner/PartitionerProviderImpl.class
-com/rubensminoru/morphosis/partitioners/kafka_offset_aware_partitioner/repositories/PartitionLastOffsetRepository.class

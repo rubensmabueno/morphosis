@@ -1,3 +1,12 @@
+# Maven build directories
+target/
+
+# Maven descriptor files
+*.pom
+
+# Maven local repository
+.m2/
+
 # Compiled class file
 *.class
 
