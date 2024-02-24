@@ -1,0 +1,11 @@
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/ConsumerModule.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/Main.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/MainModule.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/loaders/CommitterProviderLoader.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/loaders/ConfigLoader.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/loaders/ConsumerProviderLoader.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/loaders/PartitionerProviderLoader.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/loaders/ProviderCatalogLoader.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/services/ConsumerService.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/services/PartitionService.java
+/home/rubensminoru/Development/morphosis/core/src/main/java/com/rubensminoru/morphosis/core/services/PartitionerService.java

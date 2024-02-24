@@ -1,0 +1,7 @@
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/Consumer.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/ConsumerFactory.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/ConsumerProvider.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/config/ConsumerConfig.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/entities/ConsumerRecord.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/entities/Record.java
+/home/rubensminoru/Development/morphosis/consumers/consumers_shared/src/main/java/com/rubensminoru/morphosis/consumers/shared/entities/RecordMetadata.java

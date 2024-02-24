@@ -1,0 +1,8 @@
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/Bootstrap.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerFactoryImpl.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerImpl.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerProviderImpl.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/TopicConsumer.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/config/ConsumerConfigImpl.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/entities/RecordImpl.java
+/home/rubensminoru/Development/morphosis/consumers/kafka_topic_consumer/src/main/java/com/rubensminoru/morphosis/consumers/kafka_topic_consumer/entities/RecordMetadataImpl.java

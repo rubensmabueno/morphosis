@@ -1,0 +1,5 @@
+com/rubensminoru/morphosis/partitioners/shared/repositories/PartitionInfoRepository.class
+com/rubensminoru/morphosis/partitioners/shared/PartitionerProvider.class
+com/rubensminoru/morphosis/partitioners/shared/Partitioner.class
+com/rubensminoru/morphosis/partitioners/shared/Partition.class
+com/rubensminoru/morphosis/partitioners/shared/factories/PartitionInfoFactory.class

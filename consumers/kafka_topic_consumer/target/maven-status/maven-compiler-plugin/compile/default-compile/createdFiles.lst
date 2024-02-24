@@ -1,0 +1,8 @@
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerImpl.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerProviderImpl.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/Bootstrap.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/entities/RecordMetadataImpl.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/entities/RecordImpl.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/TopicConsumer.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/ConsumerFactoryImpl.class
+com/rubensminoru/morphosis/consumers/kafka_topic_consumer/config/ConsumerConfigImpl.class

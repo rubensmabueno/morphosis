@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.rubensminoru.morphosis</groupId>
+        <artifactId>consumers</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.rubensminoru.morphosis.consumers</groupId>
+    <artifactId>kafka_topic_consumer</artifactId>
+
+    <properties>
+        <dep.kafka_version>3.6.1</dep.kafka_version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.13</artifactId>
+            <version>${dep.kafka_version}</version>
+        </dependency>
+        <!-- CONNECTORS SHARED -->
+        <dependency>
+            <groupId>com.rubensminoru.morphosis.consumers</groupId>
+            <artifactId>consumers_shared</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.rubensminoru.morphosis</groupId>
+            <artifactId>shared</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>

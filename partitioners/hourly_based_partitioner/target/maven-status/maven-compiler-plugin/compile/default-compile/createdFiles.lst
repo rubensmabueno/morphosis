@@ -1,0 +1,4 @@
+com/rubensminoru/morphosis/partitioners/hourly_based_partitioner/PartitionerProviderImpl.class
+com/rubensminoru/morphosis/partitioners/hourly_based_partitioner/entities/PartitionInfoFactoryImpl.class
+com/rubensminoru/morphosis/partitioners/hourly_based_partitioner/PartitionerImpl.class
+com/rubensminoru/morphosis/partitioners/hourly_based_partitioner/entities/PartitionInfo.class
