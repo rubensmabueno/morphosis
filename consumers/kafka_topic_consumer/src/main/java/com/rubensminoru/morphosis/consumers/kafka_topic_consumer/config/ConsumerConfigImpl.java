@@ -17,4 +17,6 @@ public class ConsumerConfigImpl implements ConsumerConfig {
     private int poolDuration;
     private String topicName;
     private int partitionForget;
+    private String keyFormat;
+    private String valueFormat;
 }

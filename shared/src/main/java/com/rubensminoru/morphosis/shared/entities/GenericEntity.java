@@ -4,7 +4,7 @@ package com.rubensminoru.morphosis.shared.entities;
 import java.util.UUID;
 
 public class GenericEntity implements Entity<Long> {
-    private Long id;
+    private final Long id;
 
     public GenericEntity() {
         this.id = UUID.randomUUID().getMostSignificantBits();
@@ -12,5 +12,5 @@ public class GenericEntity implements Entity<Long> {
 
     public Long getId() {
         return id;
-    };
+    }
 }

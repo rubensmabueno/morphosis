@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ConsumerImpl implements Consumer {
     private final ConsumerConfigImpl consumerConfig;
-    private TopicConsumer topicConsumer;
+    private final TopicConsumer topicConsumer;
     private InMemoryRepository<String, RecordMetadataImpl> recordMetadataRepository;
 
     public ConsumerImpl(ConsumerConfigImpl consumerConfig) {
@@ -20,6 +20,8 @@ public class ConsumerImpl implements Consumer {
                 consumerConfig.getBoostrapServer(),
                 consumerConfig.getGroupId(),
                 consumerConfig.getPoolDuration(),
+                consumerConfig.getKeyFormat(),
+                consumerConfig.getValueFormat(),
                 this.recordMetadataRepository
         );
     }
@@ -31,8 +33,6 @@ public class ConsumerImpl implements Consumer {
 
     @Override
     public List<ConsumerRecord> consume() {
-        List<ConsumerRecord> records = this.topicConsumer.consume();
-
-        return records;
-    };
+        return this.topicConsumer.consume();
+    }
 }

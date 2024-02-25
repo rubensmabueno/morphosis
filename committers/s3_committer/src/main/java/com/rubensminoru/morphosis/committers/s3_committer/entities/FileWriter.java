@@ -1,11 +1,11 @@
 package com.rubensminoru.morphosis.committers.s3_committer.entities;
 
-import com.rubensminoru.morphosis.consumers.shared.entities.Record;
+import com.rubensminoru.morphosis.shared.entities.RecordMessage;
 
 import java.util.List;
 
 public interface FileWriter {
-    public void write(List<Record> records);
+    void write(List<RecordMessage> records);
 
-    public void commit();
+    void commit();
 }

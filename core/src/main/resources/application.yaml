@@ -6,6 +6,8 @@ consumers:
       pool_duration: 10000
       topic_name: "topic1"
       partition_forget: 3000
+      key_format: "string"
+      value_format: "json"
     partitioners:
       - type: "kafka_offset_aware"
       - type: "hourly_based"

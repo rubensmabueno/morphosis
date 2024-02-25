@@ -5,9 +5,9 @@ import com.rubensminoru.morphosis.shared.entities.Entity;
 
 
 public interface Partitioner extends Entity<Long> {
-    public Boolean isEligible(Partition partition, ConsumerRecord record);
+    Boolean isEligible(Partition partition, ConsumerRecord record);
 
-    public void registerPartition(Partition partition, ConsumerRecord record);
+    void registerPartition(Partition partition, ConsumerRecord record);
 
-    public Boolean shouldCommit(Partition partition);
+    Boolean shouldCommit(Partition partition);
 }

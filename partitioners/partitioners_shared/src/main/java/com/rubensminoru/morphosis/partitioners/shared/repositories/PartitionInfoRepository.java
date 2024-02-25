@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class PartitionInfoRepository<T> {
     private final PartitionInfoFactory<T> partitionInfoFactory;
-    private Map<Partition, T> partitionInfoMap;
+    private final Map<Partition, T> partitionInfoMap;
 
     public PartitionInfoRepository(PartitionInfoFactory<T> partitionInfoFactory) {
         this.partitionInfoMap = new HashMap<>();

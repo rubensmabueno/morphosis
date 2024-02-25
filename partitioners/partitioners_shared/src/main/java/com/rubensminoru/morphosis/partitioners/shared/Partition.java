@@ -12,7 +12,7 @@ import java.util.List;
 
 @Getter
 public class Partition extends GenericEntity {
-    private List<RecordMetadata> recordMetadataList;
+    private final List<RecordMetadata> recordMetadataList;
 
     public Partition() {
         super();

@@ -5,7 +5,7 @@ import com.rubensminoru.morphosis.consumers.shared.entities.ConsumerRecord;
 import java.util.List;
 
 public interface Consumer {
-    public void initialize();
+    void initialize();
 
-    public List<ConsumerRecord> consume();
+    List<ConsumerRecord> consume();
 }

@@ -6,7 +6,7 @@ import java.util.*;
 
 
 public class InMemoryRepository<U, T extends Entity<U>> {
-    private Map<U, T> entities;
+    private final Map<U, T> entities;
 
     public InMemoryRepository() {
         this.entities = new HashMap<>();

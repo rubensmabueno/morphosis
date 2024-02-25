@@ -46,10 +46,6 @@ public class PartitionerImpl extends GenericEntity implements Partitioner {
     public Boolean shouldCommit(Partition partition) {
         PartitionInfo partitionInfo = partitionInfoRepository.get(partition);
 
-        System.out.println(LocalDateTime.ofInstant(Instant.ofEpochMilli(partitionInfo.getUpdateTimestamp()), ZoneOffset.UTC));
-        System.out.println(LocalDateTime.ofInstant(Instant.ofEpochMilli(System.currentTimeMillis()), ZoneOffset.UTC));
-        System.out.println((partitionInfo.getUpdateTimestamp() + this.waitFor < System.currentTimeMillis()));
-
         return (partitionInfo.getUpdateTimestamp() + this.waitFor < System.currentTimeMillis());
     }
 }

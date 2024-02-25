@@ -28,7 +28,7 @@ public class Bootstrap {
             // Produce some sample data to Kafka
             for (int i = 0; i < 10; i++) {
                 String key = "key" + i;
-                String value = "value" + i;
+                String value = "{\"name\": \"John\", \"age\": " + i + "}";
                 ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
                 producer.send(record);
                 System.out.println("Produced: " + record);
