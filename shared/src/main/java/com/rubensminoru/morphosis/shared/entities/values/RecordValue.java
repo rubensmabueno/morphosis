@@ -1,18 +1,15 @@
 package com.rubensminoru.morphosis.shared.entities.values;
 
-import com.rubensminoru.morphosis.shared.entities.fields.Field;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.Set;
 
 public class RecordValue extends Value {
-    private final LinkedHashMap<Field, Value> fields;
+    private final Set<Value> fields;
 
-    public RecordValue(LinkedHashMap<Field, Value> fields) {
+    public RecordValue(Set<Value> fields) {
         this.fields = fields;
     }
 
-    public Map<Field, Value> getFields() {
+    public Set<Value> getFields() {
         return fields;
     }
 
@@ -20,9 +17,8 @@ public class RecordValue extends Value {
         StringBuilder string = new StringBuilder();
 
         string.append("{ ");
-        for (Map.Entry<Field, Value> fieldValueEntry : fields.entrySet()) {
-            string.append(fieldValueEntry.getKey().getName()).append(": ");
-            string.append(fieldValueEntry.getValue().toString()).append("; ");
+        for (Value value : fields) {
+            string.append(value.toString()).append("; ");
         }
         string.append(" };");
 

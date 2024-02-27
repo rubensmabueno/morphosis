@@ -79,21 +79,21 @@ public class TopicConsumer {
             Field valueField = valueMessage.getSchema().getField();
             valueField.setName("value");
 
-            LinkedHashMap<Field, Value> recordValue = new LinkedHashMap<>();
-            recordValue.put(keyField, keyMessage.getValue());
-            recordValue.put(valueField, valueMessage.getValue());
+            HashSet<Value> recordValue = new LinkedHashSet<>();
+            recordValue.add(keyMessage.getValue());
+            recordValue.add(valueMessage.getValue());
+
+            HashSet<Field> recordField = new LinkedHashSet<>();
+            recordField.add(keyField);
+            recordField.add(valueField);
 
             list.add(
                 new ConsumerRecord(
                     new RecordMessage(
                             new Schema(
-                                    new RecordField(
-                                            List.of(keyField, valueField)
-                                    )
+                                    new RecordField(recordField)
                             ),
-                            new RecordValue(
-                                    recordValue
-                            )
+                            new RecordValue(recordValue)
                     ),
                     recordMetadataRepository.add(
                             new RecordMetadataImpl(

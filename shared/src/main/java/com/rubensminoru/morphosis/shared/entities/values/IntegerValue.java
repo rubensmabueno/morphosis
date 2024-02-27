@@ -2,13 +2,13 @@ package com.rubensminoru.morphosis.shared.entities.values;
 
 
 public class IntegerValue extends Value {
-    private final int value;
+    private final Integer value;
 
-    public IntegerValue(int value) {
+    public IntegerValue(Integer value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 

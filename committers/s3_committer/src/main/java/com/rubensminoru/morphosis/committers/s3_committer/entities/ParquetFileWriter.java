@@ -24,22 +24,18 @@ public class ParquetFileWriter implements FileWriter {
     }
 
     public void write(List<RecordMessage> records) {
-        try {
-            if (!records.isEmpty()) {
-                if (writer == null) {
-                    this.writer = createFile(records.getFirst().getSchema());
-                }
-            }
-
+        if (!records.isEmpty()) {
             try {
+                if (writer == null) {
+                    this.writer = createFile(records.getLast().getSchema());
+                }
+
                 for (RecordMessage record : records) {
                     writer.write(record);
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 

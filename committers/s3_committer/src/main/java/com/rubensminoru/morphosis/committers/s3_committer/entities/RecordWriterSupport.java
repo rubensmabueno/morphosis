@@ -1,5 +1,6 @@
 package com.rubensminoru.morphosis.committers.s3_committer.entities;
 
+import com.rubensminoru.morphosis.shared.entities.Pair;
 import com.rubensminoru.morphosis.shared.entities.RecordMessage;
 import com.rubensminoru.morphosis.shared.entities.Schema;
 
@@ -22,9 +23,11 @@ import java.util.Map;
 
 public class RecordWriterSupport extends WriteSupport<RecordMessage> {
     private final MessageType messageType;
+    private final Schema schema;
     private RecordConsumer recordConsumer;
 
     public RecordWriterSupport(Schema schema) {
+        this.schema = schema;
         this.messageType = parseSchema(schema);
     }
 
@@ -42,34 +45,49 @@ public class RecordWriterSupport extends WriteSupport<RecordMessage> {
     public void write(RecordMessage message) {
         recordConsumer.startMessage();
 
-        writeFields((RecordValue) message.getValue(), 0);
+        writeFields((RecordValue) message.getValue(), (RecordField) schema.getField(), 0);
 
         recordConsumer.endMessage();
     }
 
-    private int writeFields(RecordValue recordValue, int position) {
-        for (Map.Entry<Field, Value> fieldValue : recordValue.getFields().entrySet()) {
-            Field field = fieldValue.getKey();
-            Value value = fieldValue.getValue();
+
+    private int writeFields(RecordValue recordValue, RecordField recordField, int position) {
+        for (Pair<Field, Value> fieldValue : Pair.zip(recordField.getFields(), recordValue.getFields())) {
+            Field field = fieldValue.getLeft();
+            Value value = fieldValue.getRight();
+
             String name = field.getName();
 
-            recordConsumer.startField(name, position);
-
             if (value instanceof RecordValue) {
-                recordConsumer.startGroup();
-                position = writeFields((RecordValue) value, 0);
-                recordConsumer.endGroup();
+                if (value != null) {
+                    recordConsumer.startField(name, position);
+                    recordConsumer.startGroup();
+                    writeFields((RecordValue) value, (RecordField) field, 0);
+                    recordConsumer.endGroup();
+                    recordConsumer.endField(name, position);
+                } else {
+                    System.out.println("HERE");
+                }
             } else if (value instanceof StringValue) {
                 String stringValue = ((StringValue) value).getValue();
-                recordConsumer.addBinary(Binary.fromString(stringValue));
-                position++;
+
+                if (stringValue != null) {
+                    recordConsumer.startField(name, position);
+                    recordConsumer.addBinary(Binary.fromString(stringValue));
+                    recordConsumer.endField(name, position);
+                }
             } else if (value instanceof IntegerValue) {
-                int intValue = ((IntegerValue) value).getValue();
-                recordConsumer.addInteger(intValue);
-                position++;
+                Integer intValue = ((IntegerValue) value).getValue();
+
+                if (intValue != null) {
+                    recordConsumer.startField(name, position);
+                    recordConsumer.addInteger(intValue);
+                    recordConsumer.endField(name, position);
+                }
             }
 
-            recordConsumer.endField(name, position);
+            position++;
+
         }
         return position;
     }

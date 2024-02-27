@@ -34,6 +34,26 @@ public class Bootstrap {
                 System.out.println("Produced: " + record);
             }
 
+            // Produce some sample data to Kafka
+            for (int i = 10; i < 20; i++) {
+                String key = "key" + i;
+                String value = "{\"name\": \"John\", \"age\": " + i + ", \"country\": \"Brazil\"}";
+                ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
+                producer.send(record);
+                System.out.println("Produced: " + record);
+            }
+
+
+            // Produce some sample data to Kafka
+            for (int i = 10; i < 20; i++) {
+                String key = "key" + i;
+                String value = "{\"name\": \"John\", \"age\": " + i + ", \"address\": {\"country\": \"Brazil\"}}";
+                ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
+                producer.send(record);
+                System.out.println("Produced: " + record);
+            }
+
+
             producer.flush();
         } catch (Exception e) {
             e.printStackTrace();
