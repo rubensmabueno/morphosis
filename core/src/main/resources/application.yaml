@@ -1,0 +1,17 @@
+consumers:
+  - type: "kafka_topic"
+    consumer_config:
+      boostrap_server: "http://localhost:9092"
+      group_id: "group1"
+      pool_duration: 10000
+      topic_name: "topic1"
+      partition_forget: 3000
+      key_format: "string"
+      value_format: "json"
+    partitioners:
+      - type: "kafka_offset_aware"
+      - type: "hourly_based"
+    committers:
+      - type: "s3"
+        config:
+          format: "parquet"
